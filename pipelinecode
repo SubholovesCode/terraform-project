@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('checkout') {
             steps {
-                git 'https://github.com/devopsbyraham/terraform-project.git'
+                git 'https://github.com/SubholovesCode/terraform-project.git'
             }
         }
         stage('init') {
@@ -29,7 +29,7 @@ pipeline {
         }
         stage('action') {
             steps {
-                sh 'terraform $action --auto-approve'
+                sh 'terraform apply --auto-approve'
             }
         }
     }
